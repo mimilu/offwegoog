@@ -13,7 +13,7 @@
 </div>
 <div id="centerColHeader">
   <h2>
-    ${confirmation}. You will be redirected shortly.
+    ${confirmation} You will be redirected shortly.
     <% String destinationURL = "/";
       if (request.getAttribute("destination_url") != null) {
     destinationURL = request.getAttribute("destination_url").toString();
