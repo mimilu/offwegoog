@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="utf-8"?>
+<web-app xmlns="http://xmlns.jcp.org/xml/ns/javaee"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee
+         http://xmlns.jcp.org/xml/ns/javaee/web-app_3_1.xsd" version="3.1">
+  <servlet>
+    <servlet-name>BrowseIdeas</servlet-name>
+    <servlet-class>com.google.offwegoog.BrowseIdeas</servlet-class>
+  </servlet>
+  <!-- JSPC servlet mappings start -->
+
+    <servlet>
+        <servlet-name>org.apache.jsp.confirm_jsp</servlet-name>
+        <servlet-class>org.apache.jsp.confirm_jsp</servlet-class>
+    </servlet>
+
+    <servlet>
+        <servlet-name>org.apache.jsp.viewPoll_jsp</servlet-name>
+        <servlet-class>org.apache.jsp.viewPoll_jsp</servlet-class>
+    </servlet>
+
+    <servlet>
+        <servlet-name>org.apache.jsp.browseIdeas_jsp</servlet-name>
+        <servlet-class>org.apache.jsp.browseIdeas_jsp</servlet-class>
+    </servlet>
+
+    <servlet>
+        <servlet-name>org.apache.jsp.admin_jsp</servlet-name>
+        <servlet-class>org.apache.jsp.admin_jsp</servlet-class>
+    </servlet>
+
+    <servlet>
+        <servlet-name>org.apache.jsp.ideaEntry_jsp</servlet-name>
+        <servlet-class>org.apache.jsp.ideaEntry_jsp</servlet-class>
+    </servlet>
+
+    <servlet>
+        <servlet-name>org.apache.jsp.editIdea_jsp</servlet-name>
+        <servlet-class>org.apache.jsp.editIdea_jsp</servlet-class>
+    </servlet>
+
+    <servlet>
+        <servlet-name>org.apache.jsp.viewOwnedPolls_jsp</servlet-name>
+        <servlet-class>org.apache.jsp.viewOwnedPolls_jsp</servlet-class>
+    </servlet>
+
+    <servlet>
+        <servlet-name>org.apache.jsp.index_jsp</servlet-name>
+        <servlet-class>org.apache.jsp.index_jsp</servlet-class>
+    </servlet>
+
+    <servlet>
+        <servlet-name>org.apache.jsp.home_jsp</servlet-name>
+        <servlet-class>org.apache.jsp.home_jsp</servlet-class>
+    </servlet>
+
+    <servlet>
+        <servlet-name>org.apache.jsp.createPoll_jsp</servlet-name>
+        <servlet-class>org.apache.jsp.createPoll_jsp</servlet-class>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>org.apache.jsp.confirm_jsp</servlet-name>
+        <url-pattern>/confirm.jsp</url-pattern>
+    </servlet-mapping>
+
+    <servlet-mapping>
+        <servlet-name>org.apache.jsp.viewPoll_jsp</servlet-name>
+        <url-pattern>/viewPoll.jsp</url-pattern>
+    </servlet-mapping>
+
+    <servlet-mapping>
+        <servlet-name>org.apache.jsp.browseIdeas_jsp</servlet-name>
+        <url-pattern>/browseIdeas.jsp</url-pattern>
+    </servlet-mapping>
+
+    <servlet-mapping>
+        <servlet-name>org.apache.jsp.admin_jsp</servlet-name>
+        <url-pattern>/admin.jsp</url-pattern>
+    </servlet-mapping>
+
+    <servlet-mapping>
+        <servlet-name>org.apache.jsp.ideaEntry_jsp</servlet-name>
+        <url-pattern>/ideaEntry.jsp</url-pattern>
+    </servlet-mapping>
+
+    <servlet-mapping>
+        <servlet-name>org.apache.jsp.editIdea_jsp</servlet-name>
+        <url-pattern>/editIdea.jsp</url-pattern>
+    </servlet-mapping>
+
+    <servlet-mapping>
+        <servlet-name>org.apache.jsp.viewOwnedPolls_jsp</servlet-name>
+        <url-pattern>/viewOwnedPolls.jsp</url-pattern>
+    </servlet-mapping>
+
+    <servlet-mapping>
+        <servlet-name>org.apache.jsp.index_jsp</servlet-name>
+        <url-pattern>/index.jsp</url-pattern>
+    </servlet-mapping>
+
+    <servlet-mapping>
+        <servlet-name>org.apache.jsp.home_jsp</servlet-name>
+        <url-pattern>/home.jsp</url-pattern>
+    </servlet-mapping>
+
+    <servlet-mapping>
+        <servlet-name>org.apache.jsp.createPoll_jsp</servlet-name>
+        <url-pattern>/createPoll.jsp</url-pattern>
+    </servlet-mapping>
+
+<!-- JSPC servlet mappings end -->
+
+<servlet-mapping>
+    <servlet-name>BrowseIdeas</servlet-name>
+    <url-pattern>/BrowseIdeas</url-pattern>
+  </servlet-mapping>
+  <welcome-file-list>
+    <welcome-file>BrowseIdeas</welcome-file>
+    <welcome-file>home.jsp</welcome-file>
+  </welcome-file-list>
+  <security-constraint>
+    <web-resource-collection>
+      <web-resource-name>home</web-resource-name>
+      <url-pattern>/*</url-pattern>
+    </web-resource-collection>
+    <auth-constraint>
+      <role-name>*</role-name>
+    </auth-constraint>
+  </security-constraint>
+  <security-constraint>
+    <web-resource-collection>
+      <web-resource-name>admin</web-resource-name>
+      <url-pattern>/admin</url-pattern>
+    </web-resource-collection>
+    <auth-constraint>
+      <role-name>admin</role-name>
+    </auth-constraint>
+  </security-constraint>
+</web-app>

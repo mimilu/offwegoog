@@ -1,0 +1,8 @@
+<component name="ArtifactManager">
+  <artifact type="war" name="offwego:war">
+    <output-path>$PROJECT_DIR$/target</output-path>
+    <root id="archive" name="offwego-1.0-SNAPSHOT.war">
+      <element id="artifact" artifact-name="offwego:war exploded" />
+    </root>
+  </artifact>
+</component>
