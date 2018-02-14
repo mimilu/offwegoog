@@ -19,14 +19,14 @@
     <form method="POST" action="/editIdea">
         <div>
             <label for="title"><b>Idea Title</b></label>
-            <input type="text" name="offsiteIdea_title" id="title" size="40" value="${title}" class="form-control" />
+            <input type="text" name="offsiteIdea_title" id="title" size="40" value="<c:out value="${title}" />" class="form-control" />
             <p />
         </div>
 
         <div>
             <label for="description"><b>Describe this idea in more detail</b></label>
             <br />
-            <textarea name="offsiteIdea_description" id="description" rows="10" cols="50" class="form-control">${description}</textarea>
+            <textarea name="offsiteIdea_description" id="description" rows="10" cols="50" class="form-control"><c:out value="${description}" /></textarea>
         </div>
 
         <input type="hidden" name="offsiteIdea_id" value="${id}">

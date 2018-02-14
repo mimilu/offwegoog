@@ -13,12 +13,12 @@
 </div>
 <div id="centerColHeader">
   <h2>
-    ${confirmation}. You will be redirected shortly.
+    ${confirmation} You will be redirected shortly.
     <% String destinationURL = "/";
       if (request.getAttribute("destination_url") != null) {
     destinationURL = request.getAttribute("destination_url").toString();
     } %>
-    <meta http-equiv="Refresh" content="3;url=<%= destinationURL %>">
+    <meta http-equiv="Refresh" content="2;url=<%= destinationURL %>">
   </h2>
 </div>
 <div id="footer">Created by mimichen@ - 2018</div>

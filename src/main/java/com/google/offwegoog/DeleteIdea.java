@@ -39,7 +39,6 @@ public class DeleteIdea extends HttpServlet {
       final String confirmation = "Idea deleted.";
 
       req.setAttribute("confirmation", confirmation);
-      req.setAttribute("destination_url", "/viewPoll");
       req.getRequestDispatcher("/confirm.jsp").forward(req, resp);
 
     } catch (SQLException e) {
